@@ -1,0 +1,77 @@
+{% extends "nav.html" %}
+{% block title %}
+Product
+{% endblock %}
+{% block content %}
+<head>
+<style>
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+</head>
+
+<section class="content">
+<body>
+<table class="table table-sm">
+  <tr>
+    {% for item in chosenProduct %}
+      <tr>
+        <th scope="row">Product</th>
+        <td scope="col">{{item['Product']}}</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">Price</th>
+        <td scope="col">£{{item['Price']}}</td>
+        <td scope="col"><form action="/view" method="POST"><input type="text" id="2" name="Price">
+        <button type="submit" id="Price">Modify</button></form></td>
+      </tr>
+      <tr>
+        <th scope="row">Sale Offer</th>
+        <td scope="col">{{item['Offer']}}</td>
+        <td scope="col"><form action="/view" method="POST"><select name="Offer" id="offer1">
+          <option value="buy one get one free">buy one get one free</option>
+          <option value="free delivery">free delivery</option>
+          <option value="3 for 2">3 for 2</option>
+          <option value="none">none</option>
+        </select>
+        <button type="submit" id="Offer">Modify</button></form></td>
+      </tr>
+      <tr>
+        <th scope="row">Loyalty Offer</th>
+        <td scope="col">{{item['Loyalty']}}</td>
+          <td scope="col"><form action="/view" method="POST"><select name="Loyalty" id="loyal">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        <button type="submit" id="Loyalty">Modify</button></form></td>
+      </tr>
+      <tr>
+        <th scope="row">Inventory</th>
+        <td scope="col">{{item['Inventory']}}</td>
+        <td><form action="/view" method="POST"><input type="text" id="5" name="Inventory">
+        <button type="submit" id="Inventory">Modify</button></form></td>
+      </tr>
+      <tr>
+        <th scope="row">Pay Later</th>
+        <td scope="col">{{item['Layaway']}}</td>
+        <td scope="col"><form action="/view" method="POST"><select name="Layaway" id="Layaway1">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+        <button type="submit" id="Layaway">Modify</button></form></td>
+      </tr>
+      <tr>
+        <th scope="row">Purchases</th>
+        <td scope="col">{{item['Purchases']}}</td>
+        <td scope="col"><form action="/view" method="POST"><input type="text" id="7" name="Purchases">
+        <button type="submit" id="Purchases">Modify</button></form></td>
+      </tr>
+    {% endfor %}
+  </tr>
+</table>
+</body>
+</section>
+{% endblock %}

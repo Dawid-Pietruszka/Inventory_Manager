@@ -1,0 +1,49 @@
+{% extends "nav.html" %}
+{% block title %}
+View
+{% endblock %}
+{% block content %}
+<head>
+<style>
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+</head>
+
+<section class="content">
+<body>
+
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">Product</th>
+      <th scope="col">Price</th>
+      <th scope="col">Sale Offer</th>
+      <th scope="col">Loyalty Offer</th>
+      <th scope="col">Inventory</th>
+      <th scope="col">Pay Later</th>
+      <th scope="col">Purchases</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in prod %}
+    <tr>
+
+      <td scope="row"><a href="/product/{{item['_id']}}">{{item['Product']}}</a></td>
+      <td>£{{item['Price']}}</td>
+      <td>{{item['Offer']}}</td>
+      <td>{{item['Loyalty']}}</td>
+      <td>{{item['Inventory']}}</td>
+      <td>{{item['Layaway']}}</td>
+      <td>{{item['Purchases']}}</td>
+      </tr>
+    {% endfor %}
+    </tr>
+  </tbody>
+</table>
+</body>
+</section>
+{% endblock %}

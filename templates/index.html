@@ -1,0 +1,32 @@
+{% extends "nav.html" %}
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+  <div class="container">
+    <br><br><br><br>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <a type="button" href="{{ url_for('view') }}" class="btn btn-primary btn-lg btn-block" style="width:300px">View Products</a>
+      </div>
+      <div class="col"></div>
+    </div>
+    <br>
+      <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <a type="button" href="{{ url_for('report_page') }}" class="btn btn-secondary btn-lg btn-block" style="width:300px">Download Report</a>
+      </div>
+      <div class="col"></div>
+    </div>
+    <br>
+      <div class="row">
+        <div class="col"></div>
+      <div class="col">
+        <a type="button" href="https://www.google.com/search?q=finance+approval&rlz=1C1CHBF_en-GBGB716GB716&oq=finance+approval&aqs=chrome..69i57j0i512l9.2283j0j1&sourceid=chrome&ie=UTF-8" class="btn btn-info btn-lg btn-block" style="width:300px">Finance Approval</a>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+{% endblock %}

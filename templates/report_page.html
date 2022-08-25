@@ -1,0 +1,21 @@
+{% extends "nav.html" %}
+{% block title %}
+Product
+{% endblock %}
+{% block content %}
+
+<section class="content">
+  <header>
+
+  </header>
+
+    <div class="main" style="text-align:center;">
+      <br><br>
+      <br><br>
+      <br><br>
+      <button type="submit" id="download" class="btn btn-info btn-lg btn-block" style="width:300px"><a href="{{ url_for('report', filename='downloadFile.txt') }}">Download Report</a></button>
+
+    </div>
+
+</section>
+{% endblock %}

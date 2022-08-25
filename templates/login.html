@@ -1,0 +1,25 @@
+{% extends "nav.html" %}
+{% block title %}
+Register
+{% endblock %}
+{% block content %}
+<section class="content">
+  <header>
+
+  </header>
+  <div>
+    <form action="/login" method="POST" style="text-align:center;">
+      <label>Username:</label>
+      <br>
+      <input type="text" id="1" name="Username">
+      <br>
+      <label>Password:</label>
+      <br>
+      <input type="password" id="2" name="Password">
+      <br><br>
+      <button type="submit" id="submit">Login</button></form>
+  </div>
+
+
+</section>
+{% endblock %}
